@@ -12,8 +12,8 @@
         <div id="newsletter">
             <p>Join our mailing list</p>
             <div id="input-group">
-            <input id="email" type="email" placeholder="jdoe@gmail.com">
-            <button id="subscribe">Subscribe</button>
+            <input  [(ngModel)]="email" id="email" type="email" placeholder="jdoe@gmail.com">
+            <button (click)="send()" id="subscribe" >Subscribe</button>
         </div>
         </div>
     </div>

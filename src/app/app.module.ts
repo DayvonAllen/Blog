@@ -21,7 +21,8 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
 import { UserService } from './service/user.service';
 import { MaterialModule } from '../app/material/material.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-
+import { SuccessComponent } from './components/success/success.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     NotFoundComponent,
     BodyComponent,
     PostsComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     AngularFireAuthModule,
     FormsModule,
     MaterialModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    HttpClientModule
   ],
   providers: [ 
     PostsService,
