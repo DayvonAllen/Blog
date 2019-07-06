@@ -1,0 +1,37 @@
+<div id="hamburger" *ngIf="show; else hide">
+  <img [src]="photo" alt="menu button" (click)="hideFunc()">
+</div>
+<ng-template #hide>
+  <div id="dropdown">
+    <img [src]="close" alt="close" (click)="hideFunc()">
+    <div id="middle">
+      <div id="routing">
+        <div>
+          <a routerLink="" (click)="hideFunc()">Home</a>
+        </div>
+        <hr>
+        <div>
+          <a routerLink="posts" (click)="hideFunc()">Posts</a>
+        </div>
+        <hr>
+        <div *ngIf="!logout; else lg">
+        <div>
+          <a routerLink="login" (click)="hideFunc()">Login</a>
+        </div>
+        <hr>
+        <div>
+          <a routerLink="signup" (click)="hideFunc()">Sign Up</a>
+        </div>
+      </div>
+      <ng-template #lg>
+        <div>
+          <a routerLink="" (click)="logoutFunc()">Log Out</a>
+        </div>
+        <div id="username">
+        <h6>Hello, {{username}}!</h6>
+      </div>
+      </ng-template>
+      </div>
+    </div>
+  </div>
+</ng-template>

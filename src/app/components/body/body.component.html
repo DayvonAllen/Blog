@@ -1,0 +1,27 @@
+<div id="body">
+  <div class="title">
+    <p>Featured Articles</p>
+  </div>
+  <hr>
+  <div id="background">
+    <div id="main">
+      <div id="background">
+      <div id="main" *ngFor="let post of posts">
+        <div class="blog-post">
+          <img src={{post.photo}} alt="blog pic">
+          <div class="body">
+            <h3>{{post.title}}</h3>
+            <hr>
+            <small>Jun 24, 2019</small>
+            <div class="trunc-content">
+              <p>{{post.content | slice:0:250}}...</p>
+            </div>
+            <button routerLink="/posts/{{ post.id }}" class="read-more">Read More</button>
+          </div>
+        </div>
+        <hr class="seperator">
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,109 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+img {
+  width: 50vw;
+}
+
+.blog-post {
+  width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.main-content p {
+  line-height: 1.55;
+  font-size: 1.3rem;
+}
+
+.comment-section {
+  margin-bottom: 2rem;
+}
+
+.comment-section textarea {
+  display: inline-block;
+  width: 60vw;
+  outline: none !important;
+  resize: none;
+  border: 1px solid #1dc677;
+  border-radius: 10px;
+  padding-left: .3rem;
+}
+
+.comment-section button {
+  display: inline-block;
+  width: 12vw;
+  height: 4.5vh;
+  border: none;
+  background: #1dc677;
+  color: #ffffff;
+  border-radius: 30px;
+  margin-top: 1rem;
+  cursor: pointer;
+  outline: none !important
+}
+
+.comment-section button:hover {
+  background: #5682ac;
+}
+
+mat-card{
+  width: 60vw;
+  background: #1dc677 !important;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  
+}
+
+mat-card hr{
+  height: 2px;
+  background: #ffffff;
+  border: none;
+  border-radius: 30px;
+  width: 30vw;
+}
+@media(max-width: 768px) {
+  .blog-post {
+    width: 75vw;
+  }
+
+  .comment-section textarea {
+    display: inline-block;
+    width: 75vw;
+  }
+
+  mat-card{
+    width: 72vw;
+    background: #1dc677 !important;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    
+  }
+  mat-card h2{
+    font-size: .9rem;
+
+  }
+  mat-card p{
+    font-size: .7rem;
+
+  }
+
+  .comment-section h1 {
+    font-size: .9rem;
+  }
+
+  .comment-section button {
+    width: 25vw;
+    height: 5vh;
+  }
+
+  img {
+    width: 65vw;
+  }
+
+  .main-content p {
+    font-size: .9rem;
+  }
+}

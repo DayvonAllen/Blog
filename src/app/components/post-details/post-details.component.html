@@ -1,0 +1,31 @@
+<div class="blog-post">
+    <img src={{post.photo}} alt="blog pic">
+    <div class="body">
+      <h3>{{post.title}}</h3>
+      <p>by Dayvon Allen</p>
+      <small>Jun 24, 2019</small>
+      <hr>
+      <div class="main-content">
+        <p>{{post.content}}</p>
+      </div>
+      <hr>
+</div>
+
+<div class="comment-section">
+  <h1>Please Leave Your Comments</h1>
+  <textarea rows="10" [(ngModel)]="commentPost"></textarea>
+  <button id="commentBut" (click)="comment()">Comment</button>
+</div>
+<mat-card id="comment-body" *ngFor="let comment of comments"
+infiniteScroll
+[infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="50"
+(scrolled)="onScroll()"
+>
+      <h2>{{comment.author}}</h2>
+      <p>Says,</p>
+      <hr>
+      <p>{{comment.comment}}</p>
+      <hr>
+      <small>Posted on {{comment.date}}</small>
+</mat-card>

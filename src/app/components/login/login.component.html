@@ -1,0 +1,52 @@
+<div class="background">
+  <div class="left">
+    <div class="content">
+      <div id="top">
+        <h3>Join Us!</h3><br>
+        <hr>
+      </div>
+      <div id="bottom">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptate nls</p>
+      </div>
+      <br>
+      <hr>
+      <button routerLink="/signup" id="button">Create Account</button>
+    </div>
+  </div>
+  <div class="center">
+    <div id="body">
+      <div id="head">
+        <h4>Welcome Back!</h4>
+        <p>Please sign in to your account.</p>
+        <br>
+      </div>
+      <hr>
+      <br>
+      <br>
+      <div id="error-message">
+        <small id="error" *ngIf="error.length > 0">{{error}}</small>
+      </div>
+      <form>
+        <div id="form-group">
+          <div id="email">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" placeholder="jdoe@gmail.com" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+          </div>
+
+          <div id="password">
+            <label for="password">Password</label><br>
+            <input type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+      </form>
+      <br>
+      <br>
+      <hr>
+      <div id="btn-group">
+        <button routerLink="/signup" id="reset">Sign Up</button>
+        <button id="login" (click)="login()">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
