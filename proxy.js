@@ -1,7 +1,7 @@
 var HttpsProxyAgent = require('https-proxy-agent');
 var proxyConfig = [{
   context: '/api',
-  target: 'http://localhost:3000',
+  target: 'https://pemail1.herokuapp.com/',
   secure: false
 }];
  

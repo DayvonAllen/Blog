@@ -15,14 +15,14 @@ export class DashboardComponent implements OnInit {
   }
   send(){
     if(this.email.length > 5){
-    this.http.post('http://localhost:3000/postData',{
+    this.http.post('https://pemail1.herokuapp.com/postData',{
       "email": this.email
     }).subscribe(data => {
       console.log(data)
     })
     setTimeout(() => {
       this.router.navigate(['/success'])
-    }, .900);
+    }, 900);
   }
   }
 }
