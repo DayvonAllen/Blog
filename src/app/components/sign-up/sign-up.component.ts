@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../service/user.service';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-sign-up',
@@ -17,7 +18,8 @@ export class SignUpComponent implements OnInit {
 
   constructor(
     private user: UserService,
-    private afs: AngularFirestore
+    private afs: AngularFirestore,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -44,7 +46,7 @@ export class SignUpComponent implements OnInit {
     })
     if (this.password.length > 3 && this.password === this.passwordCon && this.error.length === 0) {
       this.user.signUpwithEmail(this.email, this.password, this.username).then(user => {
-        console.log(user)
+        this.router.navigate(['/']);
       })
     }
     else if (this.password.length <= 3) {
